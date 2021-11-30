@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Registrar</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="Logo de Football Scout" class="logo"></a>
+        <a href="#" class="usuario"><img src="img/user.png" alt="imagen de usuario"></a>
+    </header>
+
+    <section>
+        <article class="completaRegistro">
+            <div class="titulo">
+                <h2>Completa el registro</h2>
+            </div>
+            <div class="form-container">
+                <div class="form-inner">
+                    <form action="#" class="login">
+                        <table>
+                            <tr>
+                                <td colspan="2" class="field"><input type="text" placeholder="Nombre" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="field"><input type="text" placeholder="Apellidos" required></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="perfil" id="perfilClub" value="entrenador" onclick="mostrarClub()">
+                                    <label for="entrenador">Entrenador</label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="perfil" id="perfilClub" value="jugador" onclick="mostrarClub()">
+                                    <label for="jugador">Jugador</label>
+                                </td>
+                            </tr>
+                            <tr id="clubEntrenador">
+                                <td><label for="club">Busca tu club: </label></td>
+                                <td><input type="text" placeholder="Club" name="club" id="club"></td>
+                            </tr>
+                            <tr id="clubJugador">
+                                <td><label for="club">Busca tu club: </label></td>
+                                <td><input type="text" placeholder="Club" name="club" id="club"></td>
+                            </tr>
+                        </table>
+                        <div id="equipoEntrenador">
+                            <label for="club">Busca tu equipo: </label>
+                            <input type="text" placeholder="Equipo" name="equipo" id="equipo">
+                            <button type="submit">Añadir club</button>
+                        </div>
+                        <div id="equipoJugador">
+                            <label for="club">Busca tu equipo: </label>
+                            <input type="text" placeholder="Equipo" name="equipo" id="equipo">
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Registrarse">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <div class="redes">
+            <h3>Redes sociales</h3>
+            <ul>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-facebook-square"></i></li>
+            </ul>
+        </div>
+        <div class="nosotros">
+            <h3>Sobre nosotros</h3>
+            <p>somos unos crackens</p>
+        </div>
+        <div class="avisos">
+            <h3>Avisos legales</h3>
+            <ul>
+                <li>FAQ</li>
+                <li>Condiciones de uso</li>
+                <li>Otras cosas</li>
+            </ul>
+        </div><br>
+        <hr>
+        <p class="copy">Copyright &copy; 2021 Todos los derechos reservados JesusVazquez S.A.</p>
+    </footer>
+
+    <script src="js/registrar.js"></script>
+</body>
+
+</html>

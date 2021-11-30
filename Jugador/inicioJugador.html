@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../css/cabecera.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/entrenador.css">
+    <title>Inicio Entrenador</title>
+</head>
+
+<body>
+    <header>
+        <header>
+            <a href="inicioJugador.html"><img src="../img/logo.png" alt="Logo de Football Scout" class="logo"></a>
+            <a href="#" class="usuario" onclick="opcionesUser()"><img src="../img/user.png" alt="imagen de usuario"></a>
+        </header>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="inicioJugador.html"><i class="fas fa-home"></i>  Inicio</a></li>
+            <li><a href="#"><i class="fas fa-users"></i>  Plantilla</a></li>
+            <li><a href="#"><i class="fas fa-running"></i>  Entrenamiento</a></li>
+            <li><a href="#"><i class="far fa-futbol"></i>  Partido</a></li>
+            <li><a href="#"><i class="far fa-calendar-alt"></i>  Calendario</a></li>
+            <li><a href="mensajes.html"><i class="far fa-envelope"></i>  Mensaje</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div id="opcionesUsuario">
+            <h4>Hola nombreUsuario!</h4>
+            <p>Configuración</p>
+            <a href="../index.html">Salir</a>
+        </div>
+        <article>
+            <div class="tablon">
+                <h2>Tablón de anuncios</h2>
+                <select class="filtro" name="tema" id="tema">
+                    <option value="0">Filtrar</option>
+                    <option value="entrenamiento">Entrenamiento</option>
+                    <option value="partido">Partido</option>
+                    <option value="convocatoria">Convocatoria</option>
+                    <option value="formulario">Formulario</option>
+                    <option value="Anuncio">Anuncio</option>
+                </select>
+            </div>
+
+            <div class="anuncio" id="entrenamiento">
+                <h2>Entrenamiento</h2>
+                <p class="fecha">17/10/1996</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quaerat dignissimos quo!</p>
+                <a href="#"><i class="fas fa-link"></i></a>
+                <p class="autor">Atentamente, nombreUsuario</p>
+            </div>
+
+            <div class="anuncio" id="entrenamiento">
+                <h2>Entrenamiento</h2>
+                <p class="fecha">17/10/1996</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quaerat dignissimos quo!</p>
+                <a href="#"><i class="fas fa-link"></i></a>
+                <p class="autor">Atentamente, nombreUsuario</p>
+            </div>
+
+            <div class="anuncio" id="entrenamiento">
+                <h2>Entrenamiento</h2>
+                <p class="fecha">17/10/1996</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quaerat dignissimos quo!</p>
+                <a href="#"><i class="fas fa-link"></i></a>
+                <p class="autor">Atentamente, nombreUsuario</p>
+            </div>
+        </article>
+
+    </section>
+
+    <aside>
+        <h2>Próximo rival</h2>
+        <table>
+            <tr>
+                <td><b>Fecha:</b></td>
+                <td>Dia de Mes hh:hh</td>
+            </tr>
+            <tr>
+                <td><b>Nombre:</b></td>
+                <td>Lorem</td>
+            </tr>
+            <tr>
+                <td><b>Posición:</b></td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td><b>Ultimo resultado:</b></td>
+                <td>x - y</td>
+            </tr>
+            <tr>
+                <td><b>Goles a favor:</b></td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td><b>Goles en contra:</b></td>
+                <td>x</td>
+            </tr>
+        </table>
+        <div class="siguiente">
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="redes">
+            <h3>Redes sociales</h3>
+            <ul>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-facebook-square"></i></li>
+            </ul>
+        </div>
+        <div class="nosotros">
+            <h3>Sobre nosotros</h3>
+            <p>somos unos crackens</p>
+        </div>
+        <div class="avisos">
+            <h3>Avisos legales</h3>
+            <ul>
+                <li>FAQ</li>
+                <li>Condiciones de uso</li>
+                <li>Otras cosas</li>
+            </ul>
+        </div><br>
+        <hr>
+        <p class="copy">Copyright &copy; 2021 Todos los derechos reservados JesusVazquez S.A.</p>
+    </footer>
+</body>
+
+</html>

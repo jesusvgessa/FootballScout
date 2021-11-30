@@ -1,0 +1,522 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: #edf0f5;
+}
+
+
+/* nav */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 5em;
+    position: relative;
+    cursor: pointer;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.97em 3em;
+    transition: all ease-in-out 400ms;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+
+/* section inicio */
+
+#opcionesUsuario {
+    background-color: orange;
+    width: 15em;
+    height: 20em;
+    float: right;
+    position: relative;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -5em 18em;
+    display: none;
+}
+
+.tablon {
+    width: 50%;
+    height: 8em;
+    background-color: white;
+    border: 0.1em solid rgb(180, 180, 180);
+    margin: 3em 0 0 10em;
+    padding: 2em;
+}
+
+.tablon h2 {
+    font-size: xx-large;
+    margin-bottom: 1.7em;
+}
+
+.tablon .filtro {
+    padding: 0.5em 1em;
+}
+
+.tablon .anadirAnuncio {
+    float: right;
+    background-color: orange;
+    padding: 0.5em 1em;
+    transition: 0.4s;
+    border-radius: 2em;
+    cursor: pointer;
+    margin-right: 15em;
+}
+
+.anadirAnuncio:hover {
+    color: orange;
+    box-shadow: white inset -5.5em 0 0 0, white inset 5.5em 0 0 0;
+}
+
+.anuncio {
+    width: 50%;
+    height: auto;
+    background-color: white;
+    border: 0.1em solid rgb(180, 180, 180);
+    margin: 3em 0 0 10em;
+    padding: 2em;
+}
+
+.anuncio h2 {
+    text-transform: uppercase;
+}
+
+.anuncio .fecha {
+    margin-bottom: 2em;
+}
+
+.anuncio .autor {
+    margin-top: 2em;
+}
+
+
+/* Aside */
+
+aside {
+    width: 23%;
+    height: auto;
+    background-color: white;
+    border: 0.1em solid rgb(180, 180, 180);
+    padding: 2em;
+    position: relative;
+    float: right;
+    margin: -64.35em 10em 0 0;
+}
+
+aside h2 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+aside table,
+.partido table,
+.mensajes table {
+    margin: 0 auto;
+    border: 0.1em solid rgb(180, 180, 180);
+    border-collapse: collapse;
+    margin-bottom: 2em;
+}
+
+aside table tr,
+.partido table tr,
+.mensajes table tr {
+    border: 0.1em solid rgb(180, 180, 180);
+}
+
+aside table tr td,
+.partido table tr td,
+.mensajes table tr td {
+    border: 0.1em solid rgb(180, 180, 180);
+    padding: 0.8em;
+}
+
+.siguiente {
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.fa-chevron-right {
+    float: right;
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+    cursor: pointer;
+}
+
+
+/* section partido/plantilla */
+
+.plantilla,
+.partido,
+.mensajes {
+    margin: 0 auto;
+    height: auto;
+    width: 70%;
+    background-color: white;
+    border: 0.1em solid rgb(180, 180, 180);
+    margin-top: 3em;
+    padding: 2em;
+    min-height: 25em;
+}
+
+.plantilla {
+    background-color: #333;
+    color: white;
+}
+
+.partido h2,
+.plantilla h2,
+.mensajes h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3em;
+}
+
+.partido table tr th,
+.mensajes table tr th {
+    border: 0.1em solid rgb(180, 180, 180);
+    padding: 0.8em;
+    text-transform: uppercase;
+}
+
+.partido table tr td,
+.mensajes table tr td {
+    text-align: center;
+}
+
+.partido table,
+.mensajes table {
+    width: 50%;
+    margin-bottom: 5em;
+}
+
+.plantilla .anadirJugador,
+.partido .anadirPartido {
+    background-color: orange;
+    padding: 0.5em 1em;
+    transition: 0.4s;
+    border-radius: 2em;
+    cursor: pointer;
+    float: right;
+}
+
+.plantilla .anadirJugador {
+    margin: -3em 10em;
+}
+
+.partido .anadirPartido {
+    margin: -3em 25em;
+}
+
+.plantilla .anadirJugador:hover,
+.partido .anadirPartido:hover {
+    color: orange;
+    box-shadow: white inset -5.5em 0 0 0, white inset 5.5em 0 0 0;
+}
+
+
+/* --------------------------------- */
+
+.jugadores {
+    margin-bottom: 5em;
+}
+
+.lista1,
+.lista2,
+.lista3,
+.lista4,
+.lista5,
+.lista6,
+.lista7,
+.lista8 {
+    display: flex;
+    position: fixed;
+    height: 16em;
+    width: 100%;
+    overflow: hidden;
+    transition: all .3s ease;
+    position: relative;
+    align-items: center;
+    list-style: none;
+}
+
+.jug1 {
+    background-image: url(../img/bono1.jpg);
+}
+
+.jug2 {
+    background-image: url(../img/dimi1.jpg);
+}
+
+.jug3 {
+    background-image: url(../img/dimi1.jpg);
+}
+
+.jug4 {
+    background-image: url(../img/navas1.jpg);
+}
+
+.jug5 {
+    background-image: url(../img/kounde1.jpg);
+}
+
+.jug6 {
+    background-image: url(../img/kounde1.jpg);
+}
+
+.jug7 {
+    background-image: url(../img/papu1.jpg);
+}
+
+.jug8 {
+    background-image: url(../img/fernando1.jpg);
+}
+
+.jug9 {
+    background-image: url(../img/fernando1.jpg);
+}
+
+.jug10 {
+    background-image: url(../img/nesyri1.jpg);
+}
+
+.jug11 {
+    background-image: url(../img/ocampos1.jpg);
+}
+
+.jug12 {
+    background-image: url(../img/ocampos1.jpg);
+}
+
+.jug13 {
+    background-image: url(../img/nesyri1.jpg);
+}
+
+.jug14 {
+    background-image: url(../img/ocampos1.jpg);
+}
+
+.jug15 {
+    background-image: url(../img/ocampos1.jpg);
+}
+
+.jug16 {
+    background-image: url(../img/nesyri1.jpg);
+}
+
+.jug17 {
+    background-image: url(../img/ocampos1.jpg);
+}
+
+.jug18 {
+    background-image: url(../img/ocampos1.jpg);
+}
+
+.jug19 {
+    background-image: url(../img/nesyri1.jpg);
+}
+
+.jug20 {
+    background-image: url(../img/ocampos1.jpg);
+}
+
+.jug22 {
+    background-image: url(../img/ocampos1.jpg);
+}
+
+.jug23 {
+    background-image: url(../img/nesyri1.jpg);
+}
+
+.jug24 {
+    background-image: url(../img/ocampos1.jpg);
+}
+
+.jug25 {
+    background-image: url(../img/ocampos1.jpg);
+}
+
+.jug1,
+.jug2,
+.jug3,
+.jug4,
+.jug5,
+.jug6,
+.jug7,
+.jug8,
+.jug9,
+.jug10,
+.jug11,
+.jug12,
+.jug13,
+.jug14,
+.jug15,
+.jug16,
+.jug17,
+.jug18,
+.jug19,
+.jug20,
+.jug21,
+.jug22,
+.jug23,
+.jug24,
+.jug25 {
+    width: 100%;
+    height: 20em;
+    color: white;
+    opacity: 0.3;
+    transition: all .3s ease-in-out;
+    filter: grayscale(100%);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jug1:hover,
+.jug2:hover,
+.jug3:hover,
+.jug4:hover,
+.jug5:hover,
+.jug6:hover,
+.jug7:hover,
+.jug8:hover,
+.jug9:hover,
+.jug10:hover,
+.jug11:hover,
+.jug12:hover,
+.jug13:hover,
+.jug14:hover,
+.jug15:hover,
+.jug16:hover,
+.jug17:hover,
+.jug18:hover,
+.jug19:hover,
+.jug20:hover,
+.jug21:hover,
+.jug22:hover,
+.jug23:hover,
+.jug24:hover,
+.jug25:hover {
+    height: 28em;
+    width: 100%;
+    filter: none;
+    opacity: 1;
+    background-size: 100%;
+}
+
+.verPerfil {
+    padding: 1em 2em;
+    background-color: yellow;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    border: 0;
+    font-size: .8rem;
+    text-transform: uppercase;
+    border-radius: 3em;
+    opacity: 0;
+    outline: 0;
+    margin-left: -4em;
+    transition: margin .5s ease-in-out, opacity .5s ease-in-out, background-color .5s ease;
+}
+
+.verPerfil a {
+    text-decoration: none;
+    color: black;
+}
+
+.verPerfil:hover {
+    background-color: rgb(161, 161, 0);
+    cursor: pointer;
+}
+
+.jug1:hover .verPerfil,
+.jug2:hover .verPerfil,
+.jug3:hover .verPerfil,
+.jug4:hover .verPerfil,
+.jug5:hover .verPerfil,
+.jug6:hover .verPerfil,
+.jug7:hover .verPerfil,
+.jug8:hover .verPerfil,
+.jug9:hover .verPerfil,
+.jug10:hover .verPerfil,
+.jug11:hover .verPerfil,
+.jug12:hover .verPerfil,
+.jug13:hover .verPerfil,
+.jug14:hover .verPerfil,
+.jug15:hover .verPerfil,
+.jug16:hover .verPerfil,
+.jug17:hover .verPerfil,
+.jug18:hover .verPerfil,
+.jug19:hover .verPerfil,
+.jug20:hover .verPerfil,
+.jug21:hover .verPerfil,
+.jug22:hover .verPerfil,
+.jug23:hover .verPerfil,
+.jug24:hover .verPerfil,
+.jug25:hover .verPerfil {
+    margin-left: 2em;
+    opacity: 1;
+}
+
+
+/* mensajes */
+
+.mensajes .mensajeNuevo,
+.mensajes .formNuevo {
+    background-color: orange;
+    padding: 0.5em 1em;
+    transition: 0.4s;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.mensajes .mensajeNuevo:hover,
+.mensajes .formNuevo:hover {
+    color: orange;
+    box-shadow: white inset -5.5em 0 0 0, white inset 5.5em 0 0 0;
+}
+
+.mensajes .optMensajes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.mensajes a {
+    padding-right: 3em;
+    padding-left: 3em;
+}
+
+.fotoUsuario img {
+    width: 8em;
+    border-radius: 5em;
+}

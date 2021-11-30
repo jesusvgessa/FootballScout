@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="Logo de Football Scout" class="logo"></a>
+        <a href="#" class="usuario"><img src="img/user.png" alt="imagen de usuario"></a>
+    </header>
+
+    <section>
+        <article class="primerLogin">
+            <div class="opciones">
+                <div class="titulo">
+                    Entrar
+                </div>
+                <div class="titulo">
+                    Registrarse
+                </div>
+            </div>
+            <div class="formulario">
+                <div class="cambioTitulo">
+                    <input class="botonRadio" type="radio" name="slide" id="login" checked>
+                    <input class="botonRadio" type="radio" name="slide" id="signup">
+                    <label for="login" class="login" onclick="optLogin()">Entrar</label>
+                    <label for="signup" class="signup" onclick="optRegistro()">Registrarse</label>
+                    <div class="cambioBoton"></div>
+                </div>
+                <div class="optFormulario">
+                    <form action="Entrenador/inicioEntrenador.html" class="login">
+                        <div class="field">
+                            <input type="text" placeholder="Usuario" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Contraseña" required>
+                        </div>
+                        <div class="pass-link">
+                            <a href="#">¿Has olvidado la contraseña?</a>
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Entrar">
+                        </div>
+                    </form>
+                    <form action="registrar.html" class="signup">
+                        <div class="field">
+                            <input type="text" placeholder="Usuario" required>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Correo" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Contraseña" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Confirmar contraseña" required>
+                        </div>
+                        <div class="terminos">
+                            <input type="checkbox" name="terminos" id="terminos" required>
+                            <label for="terminos">
+                                Acepto los términos Lorem lorem etc ...
+                            </label>
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Registrarse">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <div class="redes">
+            <h3>Redes sociales</h3>
+            <ul>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-facebook-square"></i></li>
+            </ul>
+        </div>
+        <div class="nosotros">
+            <h3>Sobre nosotros</h3>
+            <p>somos unos crackens</p>
+        </div>
+        <div class="avisos">
+            <h3>Avisos legales</h3>
+            <ul>
+                <li>FAQ</li>
+                <li>Condiciones de uso</li>
+                <li>Otras cosas</li>
+            </ul>
+        </div><br>
+        <hr>
+        <p class="copy">Copyright &copy; 2021 Todos los derechos reservados JesusVazquez S.A.</p>
+    </footer>
+
+    <script src="js/form.js"></script>
+
+</body>
+
+</html>

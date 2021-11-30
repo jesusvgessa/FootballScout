@@ -1,0 +1,72 @@
+/* Header */
+
+header {
+    height: 7em;
+    width: 100%;
+    display: block;
+    top: 0;
+    padding: 0%;
+}
+
+.logo {
+    width: 9em;
+    padding: 1.5em;
+    vertical-align: middle;
+    margin-left: 15em;
+}
+
+header .sesion {
+    font-size: 1.2em;
+    float: right;
+    margin: 1em 15em;
+    color: white;
+    background: none;
+    border: 0.2em solid;
+    padding: 1em 2em;
+    transition: 0.4s;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.sesion:hover {
+    color: white;
+    border: orange 0.2em solid;
+    box-shadow: orange inset -3.5em 0 0 0, orange inset 3.5em 0 0 0;
+}
+
+
+/* Nav */
+
+nav {
+    display: flex;
+    justify-content: right;
+    height: 1.8em;
+    width: 28em;
+    cursor: pointer;
+    margin: -4.3em 0 0 42em;
+    font-size: 1.2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    border-radius: 1em 1em 0 0;
+    transition: all ease-in-out 400ms;
+}
+
+nav a:hover {
+    color: orange;
+}

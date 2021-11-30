@@ -1,0 +1,48 @@
+/* Header */
+
+header {
+    height: 10em;
+    width: 100%;
+    display: block;
+    top: 0;
+    padding: 0%;
+    background-image: url(../img/header5.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.logo {
+    width: 9em;
+    padding: 1.5em;
+    vertical-align: middle;
+    margin-left: 15em;
+}
+
+header .sesion {
+    font-size: 1.2em;
+    float: right;
+    margin: 1em 15em;
+    color: white;
+    background: none;
+    border: 0.2em solid;
+    padding: 1em 2em;
+    transition: 0.4s;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.sesion:hover {
+    color: white;
+    border: orange 0.2em solid;
+    box-shadow: orange inset -3.5em 0 0 0, orange inset 3.5em 0 0 0;
+}
+
+.usuario img {
+    width: 3em;
+    float: right;
+    background-color: white;
+    padding: 0.6em 1em;
+    border-radius: 10em;
+    margin: 2em 15em;
+}
