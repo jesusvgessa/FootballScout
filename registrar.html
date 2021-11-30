@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="css/cabecera.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/formularios.css">
     <title>Registrar</title>
 </head>
 
@@ -22,54 +22,59 @@
     </header>
 
     <section>
-        <article class="completaRegistro">
-            <div class="titulo">
-                <h2>Completa el registro</h2>
-            </div>
-            <div class="form-container">
-                <div class="form-inner">
-                    <form action="#" class="login">
-                        <table>
-                            <tr>
-                                <td colspan="2" class="field"><input type="text" placeholder="Nombre" required></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="field"><input type="text" placeholder="Apellidos" required></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="radio" name="perfil" id="perfilClub" value="entrenador" onclick="mostrarClub()">
-                                    <label for="entrenador">Entrenador</label>
-                                </td>
-                                <td>
-                                    <input type="radio" name="perfil" id="perfilClub" value="jugador" onclick="mostrarClub()">
-                                    <label for="jugador">Jugador</label>
-                                </td>
-                            </tr>
-                            <tr id="clubEntrenador">
-                                <td><label for="club">Busca tu club: </label></td>
-                                <td><input type="text" placeholder="Club" name="club" id="club"></td>
-                            </tr>
-                            <tr id="clubJugador">
-                                <td><label for="club">Busca tu club: </label></td>
-                                <td><input type="text" placeholder="Club" name="club" id="club"></td>
-                            </tr>
-                        </table>
+        <article class="primerLogin">
+
+            <h2>Completa el registro</h2>
+
+            <div class="formulario">
+
+                <form action="Entrenador/inicioEntrenador.html" class="entrar">
+
+                    <input type="text" placeholder="Nombre" id="nombre" required><br>
+                    <input type="text" placeholder="Apellidos" id="apellidos" required><br>
+                    <input type="number" placeholder="Telefono" id="tef" min="9" max="9" required><br>
+                    <input type="text" placeholder="DNI" id="dni" required><br>
+
+                    <div class="cambioPerfil">
+                        <input class="botonRadio" type="radio" name="slide" id="entrenador" checked>
+                        <input class="botonRadio" type="radio" name="slide" id="jugador">
+                        <label for="entrenador" class="entrenador" onclick="optEntrar()">Entrenador</label>
+                        <label for="jugador" class="jugador" onclick="optRegistro()">Jugador</label>
+                        <div class="cambioBoton"></div>
+                    </div>
+
+                    <div id="club">
+                        <label for="club">Busca tu club: </label>
+                        <input type="text" placeholder="Club" name="club" id="club"><br>
+                        <div id="clubEntrenador">
+                            <input type="submit" value="Añadir club">
+                        </div><br>
+                        <input type="radio" name="club" id="club1">
+                        <label for="club1">Club1</label><br>
+                        <input type="radio" name="club" id="club2">
+                        <label for="club2">Club2</label><br>
+                        <input type="radio" name="club" id="club3">
+                        <label for="club3">Club3</label>
+                    </div>
+
+                    <div id="equipo">
+                        <label for="club">Busca tu equipo: </label>
+                        <input type="text" placeholder="Equipo" name="equipo" id="equipo"><br>
                         <div id="equipoEntrenador">
-                            <label for="club">Busca tu equipo: </label>
-                            <input type="text" placeholder="Equipo" name="equipo" id="equipo">
-                            <button type="submit">Añadir club</button>
-                        </div>
-                        <div id="equipoJugador">
-                            <label for="club">Busca tu equipo: </label>
-                            <input type="text" placeholder="Equipo" name="equipo" id="equipo">
-                        </div>
-                        <div class="field btn">
-                            <div class="btn-layer"></div>
-                            <input type="submit" value="Registrarse">
-                        </div>
-                    </form>
-                </div>
+                            <input type="submit" value="Añadir equipo">
+                        </div><br>
+                        <input type="radio" name="equipo" id="equipo1">
+                        <label for="equipo1">Equipo1</label><br>
+                        <input type="radio" name="equipo" id="equipo2">
+                        <label for="equipo2">Equipo2</label><br>
+                        <input type="radio" name="equipo" id="equipo3">
+                        <label for="equipo3">Equipo3</label>
+                    </div>
+
+                    <div class="errores"></div><br>
+
+                    <input type="submit" value="Registrarse">
+                </form>
             </div>
         </article>
     </section>
@@ -99,7 +104,7 @@
         <p class="copy">Copyright &copy; 2021 Todos los derechos reservados JesusVazquez S.A.</p>
     </footer>
 
-    <script src="js/registrar.js"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>

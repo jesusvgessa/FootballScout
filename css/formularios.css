@@ -1,0 +1,223 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: #edf0f5;
+}
+
+
+/* Entrar / Registrarse */
+
+.primerLogin {
+    overflow: hidden;
+    max-width: 25em;
+    background: rgb(255, 192, 75);
+    padding: 2em;
+    border-radius: 0.5em;
+    box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+.primerLogin .opciones {
+    display: flex;
+    width: 200%;
+}
+
+.primerLogin .titulo {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.primerLogin .cambioTitulo {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.cambioTitulo .entrar,
+.cambioTitulo .registro {
+    width: 100%;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 2.2em;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+.cambioTitulo .cambioBoton {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(left, rgb(141, 92, 0), orange);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.botonRadio {
+    display: none;
+}
+
+#registro:checked~.cambioBoton {
+    left: 50%;
+}
+
+
+/* Cambia color titulo cuando no esta pulsado */
+
+#registro:checked~label.entrar,
+#entrar:checked~label.registro {
+    color: black;
+}
+
+.formulario .optFormulario {
+    display: flex;
+    width: 250%;
+}
+
+.formulario .optFormulario form {
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.entrar,
+.registro {
+    height: auto;
+    min-height: 20em;
+    padding-bottom: 3em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    height: 12%;
+    width: 60%;
+    margin-top: 1em;
+    padding-left: 1em;
+    border-radius: 0.5em;
+    border: 0.1em solid lightgrey;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"] {
+    height: 3.5em;
+    width: 50%;
+    border-radius: 0.2em;
+    margin-left: 4em;
+    margin-top: 1em;
+    background: orange;
+    transition: all 0.4s ease;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    height: 3.5em;
+    width: 50%;
+    border-radius: 0.2em;
+    margin-left: 4em;
+    margin-top: 1em;
+    background: orange;
+    transition: all 0.8s ease;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: 0.1em solid lightgrey;
+    border-radius: 2em;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+    color: orange;
+}
+
+.terminos,
+.link {
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+
+/* terminar de registrarse */
+
+.primerLogin h2 {
+    text-align: center;
+}
+
+.primerLogin .cambioPerfil {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.cambioPerfil .entrenador,
+.cambioPerfil .jugador {
+    width: 100%;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 2.2em;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+.cambioPerfil .cambioBoton {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(left, rgb(141, 92, 0), orange);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.botonRadio {
+    display: none;
+}
+
+#jugador:checked~.cambioBoton {
+    left: 50%;
+}
+
+
+/* Cambia color titulo cuando no esta pulsado */
+
+#jugador:checked~label.entrenador,
+#entrenador:checked~label.jugador {
+    color: black;
+}
+
+#clubEntrenador,
+#equipo,
+#equipoEntrenador {
+    display: none;
+}
