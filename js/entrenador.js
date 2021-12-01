@@ -11,7 +11,7 @@ function opcionesUser() {
 //Funcion para plantilla
 //Evento multiple
 function fueraFoco() {
-    var x = document.getElementById("tema");
+    var x = document.getElementById("filtroNombre");
     x.value = x.value.toUpperCase();
     x.style.background = "white";
 }
@@ -50,7 +50,34 @@ function buscaJugador() {
     } //Fin Para
 }
 
+function filtroPos() {
+    var pos = document.getElementById("pos").value;
+    if (pos != 0) {
+        for (var i = 0; i < arrayJugadores.length; i++) {
+            if (arrayJugadores[i].posicion.toLowerCase() == (pos.toLowerCase())) {
+                fichasJugador[i].style.display = "block";
+            } else {
+                fichasJugador[i].style.display = "none";
+            } //Fin Si
+        } //Fin Para
+    } else {
+        for (var i = 0; i < arrayJugadores.length; i++) {
+            fichasJugador[i].style.display = "block";
+        } //Fin Para
+    }
+}
+
 function filtroSelect() {
     var filtro = document.getElementById("tema").value;
     //Ordenar por select value
+}
+
+//Anadir jugador
+var boton = document.getElementById("boton");
+if (arrayJugadores.length > 24) {
+    boton.style.display = "none";
+    console.log(arrayJugadores.length);
+} else {
+    boton.style.display = "block";
+    console.log(arrayJugadores.length);
 }

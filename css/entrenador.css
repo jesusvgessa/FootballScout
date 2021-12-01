@@ -256,7 +256,7 @@ section h2 {
 }
 
 .plantilla {
-    height: 70em;
+    height: 130em;
 }
 
 
@@ -286,10 +286,11 @@ section h2 {
     font-size: 1.2em;
 }
 
+.menuTabla .filtroPos,
 .menuTabla .filtroTabla {
     height: 70%;
-    width: 100%;
-    padding-left: 1em;
+    width: 8em;
+    padding-left: 0.5em;
     border-radius: 0.5em;
     font-size: 1.1em;
 }

@@ -47,18 +47,31 @@
             <nav class="menuTabla">
                 <ul>
                     <li>
+                        <select class="filtroPos" name="pos" id="pos" onChange="filtroPos()">
+                            <option value="0">Todos</option>
+                            <option value="Portero">Portero</option>
+                            <option value="Defensa">Defensa</option>
+                            <option value="Mediocentro">Mediocentro</option>
+                            <option value="Delantero">Delantero</option>
+                        </select>
+                    </li>
+                    <li>
                         <label for="filtroNombre">Buscar: </label>
-                        <input type="text" name="filtroNombre" id="filtroNombre" placeholder="Nombre" onkeypress="buscaJugador()">
+                        <input type="text" name="filtroNombre" id="filtroNombre" placeholder="Nombre" onkeypress="buscaJugador()" onfocusout="fueraFoco()" onfocus="dentroFoco(this)">
                     </li>
                     <li>
                         <select class="filtroTabla" name="tema" id="tema" onfocusout="filtroSelect()">
-                            <option value="0">Filtrar</option>
+                            <option value="0">Ordenar</option>
                             <option value="selectNombre">Nombre</option>
                             <option value="selectDorsal">Dorsal</option>
                             <option value="selectPosicion">Posición</option>
                         </select>
                     </li>
-                    <li><a href="#" id="boton"><button class="anadirJugador">Añadir jugador</button></a></li>
+                    <li>
+                        <a href="#" id="boton">
+                            <button class="anadirJugador">Añadir jugador</button>
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
@@ -71,6 +84,55 @@
                     <a href="#">Ver perfil</a>
                 </div>
                 <div class="jugador">
+                    <img src="../img/dmitrovic.jpg" alt="foto de Dmitrovic">
+                    <p class="nombre">Marko Dmitrovic</p>
+                    <p class="num">1</p>
+                    <p class="pos">Portero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/javidiaz.jpg" alt="foto de javi diaz">
+                    <p class="nombre">javi Díaz</p>
+                    <p class="num">31</p>
+                    <p class="pos">Portero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/Navas.jpg" alt="foto de navas">
+                    <p class="nombre">Jesús Navas</p>
+                    <p class="num">16</p>
+                    <p class="pos">Defensa</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/diegocarlos.jpg" alt="foto de Diego carlos">
+                    <p class="nombre">Diego Carlos</p>
+                    <p class="num">20</p>
+                    <p class="pos">Defensa</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/Koundé.jpg" alt="foto de Koundé">
+                    <p class="nombre">Jules Koundé</p>
+                    <p class="num">23</p>
+                    <p class="pos">Defensa</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/acuña.jpg" alt="foto de acuña">
+                    <p class="nombre">Marcos Acuña</p>
+                    <p class="num">19</p>
+                    <p class="pos">Defensa</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/montiel.jpg" alt="foto de montiel">
+                    <p class="nombre">gonzalo montiel</p>
+                    <p class="num">2</p>
+                    <p class="pos">Defensa</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
                     <img src="../img/Fernando.jpg" alt="foto de Fernando">
                     <p class="nombre">Papá Fernando</p>
                     <p class="num">25</p>
@@ -78,42 +140,118 @@
                     <a href="#">Ver perfil</a>
                 </div>
                 <div class="jugador">
-                    <img src="../img/bono.jpg" alt="foto de bono">
-                    <p class="nombre">Yassine Bounou</p>
-                    <p class="num">13</p>
-                    <p class="pos">Portero</p>
-                    <a href="#">Ver perfil</a>
-                </div>
-                <div class="jugador">
-                    <img src="../img/Fernando.jpg" alt="foto de Fernando">
-                    <p class="nombre">Papá Fernando</p>
-                    <p class="num">25</p>
+                    <img src="../img/rakitic.jpg" alt="foto de rakitic">
+                    <p class="nombre">Ivan rakitic</p>
+                    <p class="num">10</p>
                     <p class="pos">Mediocentro</p>
                     <a href="#">Ver perfil</a>
                 </div>
                 <div class="jugador">
-                    <img src="../img/bono.jpg" alt="foto de bono">
-                    <p class="nombre">Yassine Bounou</p>
-                    <p class="num">13</p>
-                    <p class="pos">Portero</p>
-                    <a href="#">Ver perfil</a>
-                </div>
-                <div class="jugador">
-                    <img src="../img/Fernando.jpg" alt="foto de Fernando">
-                    <p class="nombre">Papá Fernando</p>
-                    <p class="num">25</p>
+                    <img src="../img/papu.jpg" alt="foto de papu">
+                    <p class="nombre">Papu Gómez</p>
+                    <p class="num">24</p>
                     <p class="pos">Mediocentro</p>
                     <a href="#">Ver perfil</a>
                 </div>
                 <div class="jugador">
-                    <img src="../img/bono.jpg" alt="foto de bono">
-                    <p class="nombre">Yassine Bounou</p>
-                    <p class="num">13</p>
-                    <p class="pos">Portero</p>
+                    <img src="../img/jordán.jpg" alt="foto de jordán">
+                    <p class="nombre">Joan jordán</p>
+                    <p class="num">8</p>
+                    <p class="pos">Mediocentro</p>
                     <a href="#">Ver perfil</a>
                 </div>
+                <div class="jugador">
+                    <img src="../img/Ocampos.jpg" alt="foto de Ocampos">
+                    <p class="nombre">Lucas Ocampos</p>
+                    <p class="num">5</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/mir.jpg" alt="foto de rafa mir">
+                    <p class="nombre">rafa mir</p>
+                    <p class="num">12</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/suso_.jpg" alt="foto de suso">
+                    <p class="nombre">Suso</p>
+                    <p class="num">7</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/nesyri.jpg" alt="foto de nesyri">
+                    <p class="nombre">Youssef en-nesyri</p>
+                    <p class="num">15</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/nesyri.jpg" alt="foto de nesyri">
+                    <p class="nombre">Youssef en-nesyri</p>
+                    <p class="num">15</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/nesyri.jpg" alt="foto de nesyri">
+                    <p class="nombre">Youssef en-nesyri</p>
+                    <p class="num">15</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/nesyri.jpg" alt="foto de nesyri">
+                    <p class="nombre">Youssef en-nesyri</p>
+                    <p class="num">15</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/nesyri.jpg" alt="foto de nesyri">
+                    <p class="nombre">Youssef en-nesyri</p>
+                    <p class="num">15</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/nesyri.jpg" alt="foto de nesyri">
+                    <p class="nombre">Youssef en-nesyri</p>
+                    <p class="num">15</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/nesyri.jpg" alt="foto de nesyri">
+                    <p class="nombre">Youssef en-nesyri</p>
+                    <p class="num">15</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/nesyri.jpg" alt="foto de nesyri">
+                    <p class="nombre">Youssef en-nesyri</p>
+                    <p class="num">15</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <div class="jugador">
+                    <img src="../img/nesyri.jpg" alt="foto de nesyri">
+                    <p class="nombre">Youssef en-nesyri</p>
+                    <p class="num">15</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div>
+                <!-- <div class="jugador">
+                    <img src="../img/nesyri.jpg" alt="foto de nesyri">
+                    <p class="nombre">Youssef en-nesyri</p>
+                    <p class="num">15</p>
+                    <p class="pos">Delantero</p>
+                    <a href="#">Ver perfil</a>
+                </div> -->
             </div>
-
         </article>
 
     </section>
