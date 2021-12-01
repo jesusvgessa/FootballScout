@@ -32,6 +32,15 @@ function mostrarPass2() {
     } //Fin Si
 }
 
+function mostrarPassEntrar() {
+    var tipo = document.getElementById("passEntrar");
+    if (tipo.type == "password") {
+        tipo.type = "text";
+    } else {
+        tipo.type = "password";
+    } //Fin Si
+}
+
 window.onload = load;
 
 function load() {
@@ -48,7 +57,7 @@ function load() {
     //Pattern:
     var patternUsuario = /(^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{3,16})+$/;
     var patternEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var patternPass = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/;
+    var patternPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,18}$/;
 
     //Asigno un interruptor a cada variable para despues realizar la validación del formulario
     var enviarUsuario = false;
@@ -71,8 +80,8 @@ function load() {
 
     function validar() {
         borrarError();
-        if (!patternUsuario.test(usuario)) {
-            error.innerHTML = "ERROR: El usuario debe contener entre 3 y 16 letras*.";
+        if (!patternUsuario.test(this.value)) {
+            error.innerHTML = "ERROR: El usuario debe contener entre 5 y 12 carcateres.";
             usuario.setAttribute("class", "error");
             enviarUsuario = false;
         } else {
@@ -96,7 +105,7 @@ function load() {
     function validarPass() {
         borrarError();
         if (!patternPass.test(this.value)) {
-            error.innerHTML = "ERROR: La contaseña debe contener numeros(mayus/minus), letras y un simbolo.";
+            error.innerHTML = "ERROR: La contraseña debe tener entre 8 y 18 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.";
             this.setAttribute("class", "error");
             enviarPass = false;
         } else {
@@ -107,7 +116,7 @@ function load() {
 
     function validarPass2() {
         borrarError();
-        if (pass != pass2) {
+        if (pass.value != pass2.value) {
             error.innerHTML = "ERROR: Las contraseñas deben ser iguales.";
             this.setAttribute("class", "error");
             enviarPass2 = false;

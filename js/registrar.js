@@ -12,7 +12,6 @@ function elegirClub() {
     } else {
         alert("ERROR: debe seleccionar club.");
     } //Fin Si
-    console.log(club);
 }
 
 window.onload = load;
@@ -30,8 +29,8 @@ function load() {
 
     //Pattern:
     var patternNombre = /(^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{3,16})+$/;
-    var patternApes = /(^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{3,16})+$/;
-    var patternNif = /^\d{8}[a-z]$/i;
+    var patternApes = /(^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25})[ ]{1}([a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25})+$/;
+    var patternDni = /^\d{8}[A-Z]$/;
 
     //Asigno un interruptor a cada variable para despues realizar la validación del formulario
     var enviarNombre = false;
@@ -47,15 +46,15 @@ function load() {
     registrar.addEventListener("submit", validarEnviar);
 
     function borrarError() {
-        if (error.innerText.length != 0) {
+        if (error.innerHTML.length != 0) {
             error.removeChild(error.firstChild);
         } //Fin Si
     } //Fin Función
 
     function validar() {
         borrarError();
-        if (!patternNombre.test(nombre)) {
-            error.innerHTML = "ERROR: El usuario debe contener entre 3 y 16 letras*.";
+        if (!patternNombre.test(this.value)) {
+            error.innerHTML = "ERROR: El nombre debe contener entre 3 y 16 letras*.";
             nombre.setAttribute("class", "error");
             enviarNombre = false;
         } else {
@@ -66,8 +65,8 @@ function load() {
 
     function validarApes() {
         borrarError();
-        if (!patternApes.test(apes)) {
-            error.innerHTML = "ERROR: El usuario debe contener entre 3 y 16 letras*.";
+        if (!patternApes.test(this.value)) {
+            error.innerHTML = "ERROR: Debe introducir los 2 apellidos.";
             apes.setAttribute("class", "error");
             enviarApes = false;
         } else {
@@ -78,7 +77,7 @@ function load() {
 
     function validarTef() {
         borrarError();
-        if (tef.length != 9) {
+        if (this.value.length != 9) {
             error.innerHTML = "ERROR: El tef debe tener 9 digitos.";
             tef.setAttribute("class", "error");
             enviarTef = false;
@@ -90,7 +89,7 @@ function load() {
 
     function validarDni() {
         borrarError();
-        if (!patternDni.test(dni)) {
+        if (!patternDni.test(this.value)) {
             error.innerHTML = "ERROR: El DNI debe contener 8 numero seguido de una letra.";
             dni.setAttribute("class", "error");
             enviarDni = false;
