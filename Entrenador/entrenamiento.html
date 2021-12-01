@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="../css/cabecera.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -32,9 +35,34 @@
     </nav>
 
     <section>
+        <div id="opcionesUsuario">
+            <h4>Hola nombreUsuario!</h4><br>
+            <p>Configuración</p>
+            <a href="../index.html">Salir</a>
+        </div>
+        <h2>Entrenamiento</h2>
 
         <article class="partido">
-            <h2>Entrenamiento</h2>
+            <nav class="menuTabla">
+                <ul>
+                    <li>
+                        <label for="filtroNombre">Buscar: </label>
+                        <input type="text" name="filtroNombre" id="filtroNombre" placeholder="Nombre">
+                    </li>
+                    <li>
+                        <select class="filtroTabla" name="tema" id="tema">
+                            <option value="0">Filtrar</option>
+                            <option value="entrenamiento">Entrenamiento</option>
+                            <option value="partido">Partido</option>
+                            <option value="convocatoria">Convocatoria</option>
+                            <option value="formulario">Formulario</option>
+                            <option value="Anuncio">Anuncio</option>
+                        </select>
+                    </li>
+                    <li><a href="#"><button class="anadirPartido">Añadir Partido</button></a></li>
+                </ul>
+            </nav>
+
             <table id="entrenamiento">
                 <tr>
                     <th>Sesión</th>
@@ -49,7 +77,6 @@
                     <td><i class="far fa-sticky-note"></i></td>
                 </tr>
             </table>
-            <a href="#"><button class="anadirPartido">Añadir Partido</button></a>
         </article>
 
     </section>

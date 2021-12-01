@@ -5,6 +5,7 @@
 
 body {
     background-color: #edf0f5;
+    font-family: 'Dosis', sans-serif;
 }
 
 
@@ -49,7 +50,7 @@ nav a:hover {
 #opcionesUsuario {
     background-color: orange;
     width: 15em;
-    height: 20em;
+    height: 8em;
     float: right;
     position: relative;
     padding: 2em;
@@ -58,11 +59,14 @@ nav a:hover {
     align-items: center;
     margin: -5em 18em;
     display: none;
+    z-index: 1;
+    border-radius: 2em;
+    box-shadow: 0 1em 1.5em rgba(0, 0, 0, 0.6);
 }
 
 .tablon {
     width: 50%;
-    height: 8em;
+    height: auto;
     background-color: white;
     border: 0.1em solid rgb(180, 180, 180);
     margin: 3em 0 0 10em;
@@ -76,6 +80,11 @@ nav a:hover {
 
 .tablon .filtro {
     padding: 0.5em 1em;
+    margin-left: 10em;
+    width: 20%;
+    padding-left: 1em;
+    border-radius: 0.5em;
+    font-size: 1em;
 }
 
 .tablon .anadirAnuncio {
@@ -85,7 +94,7 @@ nav a:hover {
     transition: 0.4s;
     border-radius: 2em;
     cursor: pointer;
-    margin-right: 15em;
+    margin-right: 5em;
     font-size: 1em;
     color: white;
     border: 0.2em solid orange;
@@ -128,7 +137,7 @@ aside {
     padding: 2em;
     position: relative;
     float: right;
-    margin: -64.35em 10em 0 0;
+    margin: -79.7em 10em 0 0;
 }
 
 aside h2 {
@@ -175,20 +184,7 @@ aside table tr td,
 
 /* section partido/plantilla */
 
-.partido,
-.mensajes {
-    margin: 0 auto;
-    height: auto;
-    width: 70%;
-    background-color: white;
-    border: 0.1em solid rgb(180, 180, 180);
-    margin-top: 3em;
-    padding: 2em;
-    min-height: 25em;
-}
-
 .partido h2,
-.plantilla h2,
 .mensajes h2 {
     text-align: center;
     text-transform: uppercase;
@@ -210,7 +206,9 @@ aside table tr td,
 .partido table,
 .mensajes table {
     width: 50%;
-    margin-bottom: 5em;
+    background-color: white;
+    color: #333;
+    margin-top: 2em;
 }
 
 .plantilla .anadirJugador,
@@ -226,14 +224,6 @@ aside table tr td,
     border: 0.2em solid orange;
 }
 
-.plantilla .anadirJugador {
-    margin: -3em 10em;
-}
-
-.partido .anadirPartido {
-    margin: -3em 20em;
-}
-
 .plantilla .anadirJugador:hover,
 .partido .anadirPartido:hover {
     color: orange;
@@ -243,10 +233,19 @@ aside table tr td,
 
 /* Plantilla */
 
-.plantilla {
+section h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2em;
+}
+
+.plantilla,
+.partido,
+.mensajes {
     margin: 0 auto;
     width: 70%;
-    height: 100em;
+    height: auto;
+    min-height: 25em;
     background-color: white;
     border: 0.1em solid rgb(180, 180, 180);
     margin-top: 3em;
@@ -254,11 +253,49 @@ aside table tr td,
     background-color: #333;
     color: white;
     border-radius: 0.5em;
-    position: relative;
+}
+
+.plantilla {
+    height: 70em;
+}
+
+
+/* Menu tabla */
+
+.menuTabla {
+    padding-bottom: 1.5em;
+    border-bottom: white 0.1em solid;
+}
+
+.menuTabla li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuTabla label {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+}
+
+.menuTabla #filtroNombre {
+    height: 60%;
+    width: 60%;
+    padding-left: 1em;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+}
+
+.menuTabla .filtroTabla {
+    height: 70%;
+    width: 100%;
+    padding-left: 1em;
+    border-radius: 0.5em;
+    font-size: 1.1em;
 }
 
 .jugadores {
-    display: block;
+    margin-top: 2em;
 }
 
 .jugador {
@@ -266,7 +303,8 @@ aside table tr td,
     border: white solid 0.2em;
     background-color: white;
     float: left;
-    height: auto;
+    margin-left: 0.4em;
+    margin-top: 0.4em;
 }
 
 .jugador img {
@@ -288,7 +326,6 @@ aside table tr td,
     text-transform: uppercase;
     margin-left: 2em;
     font-weight: 500;
-    font-family: sans, system-ui, helvetica neue, Helvetica, Arial, sans-serif;
     color: #6a6c6f;
 }
 
@@ -306,8 +343,7 @@ aside table tr td,
 
 /* mensajes */
 
-.mensajes .mensajeNuevo,
-.mensajes .formNuevo {
+.mensajes .mensajeNuevo {
     background-color: orange;
     padding: 0.5em 1em;
     transition: 0.4s;
@@ -318,24 +354,29 @@ aside table tr td,
     border: 0.2em solid orange;
 }
 
-.mensajes .mensajeNuevo:hover,
-.mensajes .formNuevo:hover {
+.mensajes .mensajeNuevo:hover {
     color: orange;
     box-shadow: white inset -5.5em 0 0 0, white inset 5.5em 0 0 0;
-}
-
-.mensajes .optMensajes {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1em;
-}
-
-.mensajes a {
-    padding-right: 3em;
-    padding-left: 3em;
 }
 
 .fotoUsuario img {
     width: 8em;
     border-radius: 5em;
+}
+
+.menuTabla .refrescar {
+    height: 80%;
+    width: 60%;
+    border-radius: 10em;
+    transition: 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.menuTabla .refrescar:hover {
+    height: 80%;
+    border-radius: 10em;
+    background-color: white;
 }

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="../css/cabecera.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -32,13 +35,36 @@
     </nav>
 
     <section>
+        <div id="opcionesUsuario">
+            <h4>Hola nombreUsuario!</h4><br>
+            <p>Configuración</p>
+            <a href="../index.html">Salir</a>
+        </div>
+        <h2>Mensaje</h2>
 
         <article class="mensajes">
-            <h2>Mensaje</h2>
-            <div class="optMensajes">
-                <a href="#"><button class="mensajeNuevo">Mensaje nuevo</button></a>
-                <a href="mensajes.html"><i class="fas fa-redo"></i></a>
-            </div>
+
+            <nav class="menuTabla">
+                <ul>
+                    <li><label for="nombre">Buscar: </label><input type="text" name="nombre" id="nombre" placeholder="Nombre"></li>
+                    <li>
+                        <select class="filtroTabla" name="tema" id="tema">
+                            <option value="0">Filtrar</option>
+                            <option value="entrenamiento">Entrenamiento</option>
+                            <option value="partido">Partido</option>
+                            <option value="convocatoria">Convocatoria</option>
+                            <option value="formulario">Formulario</option>
+                            <option value="Anuncio">Anuncio</option>
+                        </select>
+                    </li>
+                    <li><a href="#" id="boton"><button class="mensajeNuevo">Mensaje nuevo</button></a></li>
+                    <li>
+                        <div class="refrescar">
+                            <a href="mensajes.html"><i class="fas fa-redo"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
             <table>
                 <tr>
                     <th>foto</th>
@@ -48,9 +74,9 @@
                     <th>acceder</th>
                 </tr>
                 <tr>
-                    <td class="fotoUsuario"><img src="../img/lopetegui.jpg" alt="Foto del mister lopetegui"></td>
+                    <td class="fotoUsuario"><img src="../img/lopetegui.jpg" alt="Foto de papa fernando"></td>
                     <td>nombreUsuario</td>
-                    <td><i>Bronca</i></td>
+                    <td><i>Subida de sueldo</i></td>
                     <td>13 abr 2013</td>
                     <td><i class="far fa-sticky-note"></i></td>
                 </tr>
