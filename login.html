@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,10 +38,10 @@
             <div class="formulario">
 
                 <div class="cambioTitulo">
-                    <input class="botonRadio" type="radio" name="slide" id="entrar" checked>
-                    <input class="botonRadio" type="radio" name="slide" id="registro">
-                    <label for="entrar" class="entrar" onclick="optEntrar()">Entrar</label>
-                    <label for="registro" class="registro" onclick="optRegistro()">Registrarse</label>
+                    <input class="botonRadio" type="radio" name="slide" id="tituloEntrar" checked>
+                    <input class="botonRadio" type="radio" name="slide" id="tituloRegistro">
+                    <label for="tituloEntrar" class="tituloEntrar" onclick="optEntrar()">Entrar</label>
+                    <label for="tituloRegistro" class="tituloRegistro" onclick="optRegistro()">Registrarse</label>
                     <div class="cambioBoton"></div>
                 </div>
 
@@ -50,23 +52,23 @@
                         <div class="link">
                             <a href="#">¿Has olvidado la contraseña?</a>
                         </div><br>
-                        <input type="submit" value="Entrar">
+                        <input type="submit" value="Entrar" class="botonEntrar">
                     </form>
-                    <form action="registrar.html" class="registro" id="registro">
+                    <form action="registrar.html" class="registro" id="registro" method="get">
                         <input type="text" placeholder="Usuario" id="usuario" required><br>
                         <input type="email" placeholder="Correo" id="email" required><br>
                         <input type="password" placeholder="Contraseña" id="pass" required>
-                        <i class="fas fa-eye" onclick="mostrarContrasena()"></i><br>
+                        <i class="fas fa-eye" onclick="mostrarPass()"></i><br>
                         <input type="password" placeholder="Confirmar contraseña" id="pass2" required>
-                        <i class="fas fa-eye" onclick="mostrarContrasena()"></i><br>
+                        <i class="fas fa-eye" onclick="mostrarPass2()"></i><br>
                         <div class="terminos">
                             <input type="checkbox" name="terminos" id="terminos" required>
                             <label for="terminos">
                                 Acepto los términos Lorem lorem etc ...
                             </label>
                         </div><br>
-                        <div class="errores"></div><br>
-                        <input type="submit" value="Registrarse" onclick="validar()">
+                        <div id="errores"></div><br>
+                        <input type="submit" value="Registrarse" class="botonRegistrar">
                     </form>
                 </div>
 
@@ -100,8 +102,7 @@
         <p class="copy">Copyright &copy; 2021 Todos los derechos reservados JesusVazquez S.A.</p>
     </footer>
 
-    <script src="js/form.js"></script>
-
+    <script type="text/javascript" src="js/form.js"></script>
 </body>
 
 </html>

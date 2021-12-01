@@ -9,7 +9,7 @@ body {
 }
 
 
-/* Entrar / Registrarse */
+/* titulotituloEntrar / Registrarse */
 
 .primerLogin {
     overflow: hidden;
@@ -47,8 +47,8 @@ body {
     border-radius: 5px;
 }
 
-.cambioTitulo .entrar,
-.cambioTitulo .registro {
+.cambioTitulo .tituloEntrar,
+.cambioTitulo .tituloRegistro {
     width: 100%;
     color: #fff;
     font-size: 1.5em;
@@ -75,15 +75,15 @@ body {
     display: none;
 }
 
-#registro:checked~.cambioBoton {
+#tituloRegistro:checked~.cambioBoton {
     left: 50%;
 }
 
 
 /* Cambia color titulo cuando no esta pulsado */
 
-#registro:checked~label.entrar,
-#entrar:checked~label.registro {
+#tituloRegistro:checked~label.tituloEntrar,
+#tituloEntrar:checked~label.tituloRegistro {
     color: black;
 }
 
@@ -101,7 +101,7 @@ body {
 .registro {
     height: auto;
     min-height: 20em;
-    padding-bottom: 3em;
+    padding-bottom: 5em;
 }
 
 input[type="text"],
@@ -113,48 +113,49 @@ input[type="number"] {
     margin-top: 1em;
     padding-left: 1em;
     border-radius: 0.5em;
-    border: 0.1em solid lightgrey;
     font-size: 1.2em;
     transition: all 0.3s ease;
 }
 
 input[type="submit"] {
-    height: 3.5em;
-    width: 50%;
-    border-radius: 0.2em;
-    margin-left: 4em;
-    margin-top: 1em;
-    background: orange;
-    transition: all 0.4s ease;
-    color: white;
     font-size: 1.2em;
-    cursor: pointer;
-}
-
-input[type="submit"] {
-    height: 3.5em;
-    width: 50%;
-    border-radius: 0.2em;
-    margin-left: 4em;
-    margin-top: 1em;
-    background: orange;
-    transition: all 0.8s ease;
     color: white;
-    font-size: 1.2em;
-    cursor: pointer;
-    border: 0.1em solid lightgrey;
+    background: none;
+    border: 0.2em solid;
+    padding: 1em 2em;
+    transition: 0.6s;
     border-radius: 2em;
+    cursor: pointer;
 }
 
-input[type="submit"]:hover {
-    background-color: white;
+.botonEntrar {
+    margin: 2em 0 0 6.8em;
+}
+
+.botonEntrar:hover {
     color: orange;
+    border: white 0.2em solid;
+    box-shadow: white inset -3.5em 0 0 0, white inset 3.5em 0 0 0;
+}
+
+.botonRegistrar {
+    margin: 0 0 0 6em;
+}
+
+.botonRegistrar:hover {
+    color: orange;
+    border: white 0.2em solid;
+    box-shadow: white inset -4.7em 0 0 0, white inset 4.7em 0 0 0;
 }
 
 .terminos,
 .link {
     font-size: 1em;
     margin-top: 1em;
+}
+
+.tituloRegistro i {
+    cursor: pointer;
 }
 
 
@@ -220,4 +221,16 @@ input[type="submit"]:hover {
 #equipo,
 #equipoEntrenador {
     display: none;
+}
+
+.error {
+    border: solid red 0.2em;
+}
+
+#errores {
+    background-color: red;
+    color: white;
+    width: 60%;
+    border-radius: 2em;
+    text-align: center;
 }

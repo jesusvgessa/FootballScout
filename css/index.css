@@ -4,24 +4,20 @@
     font-family: 'Oswald', sans-serif;
 }
 
-
-/* fondo */
-
-.fondo {
-    width: 100%;
-    position: relative;
-    z-index: -1;
-    top: -7em;
-    opacity: 0.9;
+body {
+    background-image: url("../img/inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #edf0f5;
 }
 
 .introduccion {
     width: 70%;
     margin: 0 auto;
     height: auto;
-    margin-top: -40em;
     padding: 3em;
     color: white;
+    margin-top: 15em;
 }
 
 .introduccion h1 {
@@ -41,7 +37,6 @@
     margin: 0 auto;
     margin-top: 10em;
     padding: 3em;
-    /* box-shadow: 1em 1em 2em 0.5em black; */
 }
 
 .desc h2 {
