@@ -86,6 +86,9 @@ nav a:hover {
     border-radius: 2em;
     cursor: pointer;
     margin-right: 15em;
+    font-size: 1em;
+    color: white;
+    border: 0.2em solid orange;
 }
 
 .anadirAnuncio:hover {
@@ -224,6 +227,9 @@ aside table tr td,
     border-radius: 2em;
     cursor: pointer;
     float: right;
+    font-size: 1em;
+    color: white;
+    border: 0.2em solid orange;
 }
 
 .plantilla .anadirJugador {
@@ -231,7 +237,7 @@ aside table tr td,
 }
 
 .partido .anadirPartido {
-    margin: -3em 25em;
+    margin: -3em 20em;
 }
 
 .plantilla .anadirJugador:hover,
@@ -497,6 +503,9 @@ aside table tr td,
     transition: 0.4s;
     border-radius: 2em;
     cursor: pointer;
+    font-size: 1em;
+    color: white;
+    border: 0.2em solid orange;
 }
 
 .mensajes .mensajeNuevo:hover,

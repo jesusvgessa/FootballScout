@@ -28,34 +28,35 @@
 
             <div class="formulario">
 
-                <form action="Entrenador/inicioEntrenador.html" class="entrar">
+                <form action="Entrenador/inicioEntrenador.html" class="entrar" id="registro">
 
                     <input type="text" placeholder="Nombre" id="nombre" required><br>
                     <input type="text" placeholder="Apellidos" id="apellidos" required><br>
-                    <input type="number" placeholder="Telefono" id="tef" min="9" max="9" required><br>
+                    <input type="number" placeholder="Telefono" id="tef" minlength="9" maxlength="9" required><br>
                     <input type="text" placeholder="DNI" id="dni" required><br>
 
                     <div class="cambioPerfil">
                         <input class="botonRadio" type="radio" name="slide" id="entrenador" checked>
                         <input class="botonRadio" type="radio" name="slide" id="jugador">
-                        <label for="entrenador" class="entrenador" onclick="optEntrar()">Entrenador</label>
-                        <label for="jugador" class="jugador" onclick="optRegistro()">Jugador</label>
+                        <label for="entrenador" class="entrenador">Entrenador</label>
+                        <label for="jugador" class="jugador">Jugador</label>
                         <div class="cambioBoton"></div>
                     </div>
 
-                    <div id="club">
+                    <form name="eligeClub">
                         <label for="club">Busca tu club: </label>
-                        <input type="text" placeholder="Club" name="club" id="club"><br>
+                        <input type="text" placeholder="Club"><br>
                         <div id="clubEntrenador">
                             <input type="submit" value="Añadir club">
                         </div><br>
-                        <input type="radio" name="club" id="club1">
+                        <input type="radio" name="club" id="club1" value="club1">
                         <label for="club1">Club1</label><br>
-                        <input type="radio" name="club" id="club2">
+                        <input type="radio" name="club" id="club2" value="club2">
                         <label for="club2">Club2</label><br>
-                        <input type="radio" name="club" id="club3">
-                        <label for="club3">Club3</label>
-                    </div>
+                        <input type="radio" name="club" id="club3" value="club3">
+                        <label for="club3">Club3</label><br>
+                        <button type="button" onclick="elegirClub()">Elegir club</button>
+                    </form>
 
                     <div id="equipo">
                         <label for="club">Busca tu equipo: </label>
@@ -73,7 +74,7 @@
 
                     <div class="errores"></div><br>
 
-                    <input type="submit" value="Registrarse" onclick="validar()">
+                    <input type="submit" value="Registrarse" class="botonRegistrar">
                 </form>
             </div>
         </article>
@@ -104,7 +105,7 @@
         <p class="copy">Copyright &copy; 2021 Todos los derechos reservados JesusVazquez S.A.</p>
     </footer>
 
-    <script src="js/form.js"></script>
+    <script src="js/registrar.js"></script>
 </body>
 
 </html>

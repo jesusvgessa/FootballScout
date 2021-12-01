@@ -12,10 +12,6 @@ function optEntrar() {
     formulario.style.marginLeft = "0%";
 }
 
-// Registrar.html
-
-
-
 // validacion formulario
 
 function mostrarPass() {
