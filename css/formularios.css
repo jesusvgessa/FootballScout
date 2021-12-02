@@ -154,8 +154,7 @@ input[type="submit"] {
     margin-top: 1em;
 }
 
-.entrar i,
-.tituloRegistro i {
+.optFormulario i {
     cursor: pointer;
 }
 
@@ -234,4 +233,22 @@ input[type="submit"] {
     width: 60%;
     border-radius: 2em;
     text-align: center;
+}
+
+
+/* Terminar de registrarse */
+
+.botonClub {
+    font-size: 0.7em;
+    color: orange;
+    background: white;
+    border: solid white;
+    padding: 1em 2em;
+    transition: 0.6s;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.botonClub:hover {
+    opacity: 0.7;
 }

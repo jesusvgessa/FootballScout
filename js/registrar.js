@@ -29,7 +29,7 @@ function load() {
 
     //Pattern:
     var patternNombre = /(^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{3,16})+$/;
-    var patternApes = /(^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25})[ ]{1}([a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25})+$/;
+    var patternApes = /(^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{4,40}))+$/;
     var patternDni = /^\d{8}[A-Z]$/;
 
     //Asigno un interruptor a cada variable para despues realizar la validación del formulario
@@ -43,6 +43,7 @@ function load() {
     apes.addEventListener("blur", validarApes);
     tef.addEventListener("blur", validarTef);
     dni.addEventListener("blur", validarDni);
+
     registrar.addEventListener("submit", validarEnviar);
 
     function borrarError() {
