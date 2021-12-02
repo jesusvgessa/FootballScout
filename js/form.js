@@ -81,7 +81,7 @@ function load() {
     function validar() {
         borrarError();
         if (!patternUsuario.test(this.value)) {
-            error.innerHTML = "ERROR: El usuario debe contener entre 5 y 12 carcateres.";
+            error.innerHTML = "ERROR: El usuario debe contener entre 3 y 16 carcateres.";
             usuario.setAttribute("class", "error");
             enviarUsuario = false;
         } else {
