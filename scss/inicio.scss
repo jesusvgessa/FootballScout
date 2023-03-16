@@ -1,0 +1,31 @@
+@import "components/buttons";
+#articulo1 {
+    background-color: rgb(255, 192, 75);
+    border-radius: 1em;
+}
+
+#articulo2,
+#articulo3 {
+    background: #24394a;
+    padding: 2em;
+    img {
+        width: 7em;
+        border-radius: 5em;
+    }
+    a {
+        color: white;
+        &:hover {
+            color: blue;
+            transition: ease-in-out 400ms;
+        }
+    }
+}
+
+.nav {
+    a {
+        &:hover {
+            color: rgb(255, 192, 75);
+            transition: ease-in-out 400ms;
+        }
+    }
+}

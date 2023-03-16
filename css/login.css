@@ -1,0 +1,60 @@
+button {
+  background-color: #ffc04b;
+  border: #ffc04b;
+  color: white;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  font-weight: 700;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+article {
+  background-color: #ffc04b;
+  -webkit-box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.1);
+}
+article h3 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+article form div {
+  margin: 0 auto;
+}
+article form a {
+  text-align: center;
+  margin-top: 1.2em;
+  margin-bottom: 4em;
+  color: white;
+}
+article form a:hover {
+  color: blue;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+}
+article form input[type=text],
+article form input[type=email],
+article form input[type=password],
+article form input[type=number],
+article form select {
+  width: 40%;
+  padding: 0.6em;
+  border: white;
+  -webkit-box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.1);
+}
+article form input[type=submit] {
+  background-color: white;
+  border: white;
+  color: #ffc04b;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.1);
+}
+article form input[type=submit]:hover {
+  opacity: 0.8;
+}

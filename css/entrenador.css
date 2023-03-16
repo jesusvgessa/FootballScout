@@ -1,0 +1,46 @@
+button {
+  background-color: #ffc04b;
+  border: #ffc04b;
+  color: white;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  font-weight: 700;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+.modal a {
+  text-decoration: none;
+  color: black;
+}
+.modal a:hover {
+  color: orange;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+nav ul {
+  height: 3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+nav ul a:hover {
+  color: orange;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+article {
+  border: 1px solid black;
+  padding: 2em;
+}
+article select {
+  margin-right: 3em;
+  width: auto;
+}

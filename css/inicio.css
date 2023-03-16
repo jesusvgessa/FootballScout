@@ -1,0 +1,43 @@
+button {
+  background-color: #ffc04b;
+  border: #ffc04b;
+  color: white;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  font-weight: 700;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+#articulo1 {
+  background-color: #ffc04b;
+  border-radius: 1em;
+}
+
+#articulo2,
+#articulo3 {
+  background: #24394a;
+  padding: 2em;
+}
+#articulo2 img,
+#articulo3 img {
+  width: 7em;
+  border-radius: 5em;
+}
+#articulo2 a,
+#articulo3 a {
+  color: white;
+}
+#articulo2 a:hover,
+#articulo3 a:hover {
+  color: blue;
+  -webkit-transition: ease-in-out 400ms;
+  transition: ease-in-out 400ms;
+}
+
+.nav a:hover {
+  color: #ffc04b;
+  -webkit-transition: ease-in-out 400ms;
+  transition: ease-in-out 400ms;
+}

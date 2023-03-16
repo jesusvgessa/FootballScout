@@ -1,0 +1,8 @@
+button {
+  background-color: #ffc04b;
+  border: #ffc04b;
+  color: white;
+}
+button:hover {
+  opacity: 0.8;
+}
